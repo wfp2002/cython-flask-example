@@ -7,11 +7,13 @@ Agora para compilar com base em C usando Cython:
 
 sudo apt-get install cython ou  cython3 para python3
 
+As linhas abaixo devem conter no inicio do arquivo como no exemplo hello.py isso evitar erros de futuros updates como o language level 2 para python2 e 3 para python3, como redirecionamento de URIs pelo flask usando o boundscheck=False, always_allow_keywords=True.
+
+#cython: language_level=2, boundscheck=False, always_allow_keywords=True
+
+Adicionada as linhas execute o comando:
+
 cython --embed -o hello.c hello.py
-
-** Se der erro avisando sobre o language_level no cython, adcione a seguinte linha no inicio do arquivo.py e reexucute o comando cython.
-
-#cython: language_level=2
 
 Depois que gerou o arquivo em c, vem para compilacao usando o gcc
 
