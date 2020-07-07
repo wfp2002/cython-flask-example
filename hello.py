@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#cython: language_level=2
+#cython: language_level=2, boundscheck=False, always_allow_keywords=True
 from flask import Flask, request, escape
 
 app = Flask(__name__)
