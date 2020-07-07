@@ -1,3 +1,5 @@
+#!/usr/bin/python
+#cython: language_level=2
 from flask import Flask, request, escape
 
 app = Flask(__name__)
