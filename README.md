@@ -9,6 +9,10 @@ sudo apt-get install cython ou  cython3 para python3
 
 cython --embed -o hello.c hello.py
 
+** Se der erro avisando sobre o language_level no cython, adcione a seguinte linha no inicio do arquivo.py 
+
+#cython: language_level=2
+
 Depois que gerou o arquivo em c, vem para compilacao usando o gcc
 
 gcc -Os -I /usr/include/python2.7 hello.c -lpython2.7 -o hello
