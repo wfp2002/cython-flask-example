@@ -14,12 +14,14 @@ As linhas abaixo devem conter no inicio do arquivo como no exemplo hello.py isso
 Adicionada as linhas execute o comando:
 
 Python2-> cython --embed -o hello.c hello.py
+
 Python3-> cython3 --embed -o hello.c hello.py
 
 
 Depois que gerou o arquivo em c, vem para compilacao usando o gcc
 
 Python2-> gcc -Os -I /usr/include/python2.7 hello.c -lpython2.7 -o hello
+
 Python3-> gcc -Os -I /usr/include/python3.6m hello.c -lpython3.6m -o hello
 
 Executando: ./hello
@@ -27,6 +29,7 @@ Executando: ./hello
 ou compilando com algumas opcoes:
 
 Python2-> gcc -Os -I /usr/include/python2.7 example.c -lpython2.7 -lpthread -lm -lutil -ldl -o example
+
 Python3-> gcc -Os -I /usr/include/python3.6m example.c -lpython3.6m -lpthread -lm -lutil -ldl -o example
 
 Pra executar e a mesma coisa: ./hello
